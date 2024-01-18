@@ -24,4 +24,17 @@ conan profile detect --force
 > will be used by Conan in all commands by default unless another profile is specified
 > via the command line. 
 
+Now we will get our dependencies using
 
+```
+conan install . --output-folder=build --build=missing
+```
+
+This is going to populate our `build` folder with some `CMake` and we are ready to build
+our project:
+
+```
+cd build
+cmake .. -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release
+cmake --build .
+```
