@@ -1,3 +1,5 @@
+all: run
+
 clean:
 	rm -rf build
 
@@ -9,3 +11,6 @@ configure: deps
 
 build: configure
 	cd build && cmake --build .
+
+run:
+	./build/hello
