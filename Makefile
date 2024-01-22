@@ -12,5 +12,5 @@ configure: deps
 build: configure
 	cd build && cmake --build .
 
-run:
+run: build
 	./build/hello

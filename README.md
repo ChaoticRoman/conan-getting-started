@@ -38,3 +38,8 @@ cd build
 cmake .. -DCMAKE_TOOLCHAIN_FILE=conan_toolchain.cmake -DCMAKE_BUILD_TYPE=Release
 cmake --build .
 ```
+
+## Adding dependency and exploring include paths
+
+I had to manually explore `~/.conan/p` folder to explore how I am supposed to include
+new package.
